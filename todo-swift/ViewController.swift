@@ -19,6 +19,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     let lightOrange:UIColor = UIColor(red: 0.996, green: 0.467, blue: 0.224, alpha: 1)
     let medOrange:UIColor = UIColor(red: 0.973, green: 0.338, blue: 0.173, alpha: 1)
     let darkOrange:UIColor = UIColor(red: 0.7, green: 0.2, blue: 0.1, alpha: 1)
+    let green:UIColor = UIColor(red: 0.251, green: 0.831, blue: 0.494, alpha: 1)
+    let white:UIColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
     
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -33,8 +35,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         
         self.tableView = UITableView(frame: CGRectMake(0, 100, self.view.bounds.size.width,
             self.view.bounds.size.height-100), style:UITableViewStyle.Plain)
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "mycell")
+        self.tableView.registerClass(MyTableViewCell.self, forCellReuseIdentifier: "mycell")
         self.tableView.backgroundColor = darkOrange
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
@@ -60,12 +63,22 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        let myNewCell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("mycell", forIndexPath: indexPath) as UITableViewCell
-        
+        var myNewCell: MyTableViewCell = tableView.dequeueReusableCellWithIdentifier("mycell", forIndexPath: indexPath) as MyTableViewCell
+        myNewCell.selectionStyle = UITableViewCellSelectionStyle.None
         myNewCell.text = self.tableViewData[indexPath.row]
-        myNewCell.backgroundColor = medOrange
         
         return myNewCell
+    }
+    
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        
+        let mySelectedCell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)
+        mySelectedCell.detailTextLabel.text = "Done with this!"
+        mySelectedCell.backgroundColor = green
+        mySelectedCell.textColor = UIColor.whiteColor()
+        mySelectedCell.accessoryType = UITableViewCellAccessoryType.Checkmark
+        mySelectedCell.tintColor = UIColor.whiteColor()
+        
     }
     
     // text field delegate

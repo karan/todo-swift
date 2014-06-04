@@ -12,6 +12,7 @@
 		9EE4A135193F8F44003C7FCF /* todo_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE4A134193F8F44003C7FCF /* todo_swiftTests.swift */; };
 		9EE4A13F193F8F87003C7FCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE4A13E193F8F87003C7FCF /* ViewController.swift */; };
 		9EE4A141193F9100003C7FCF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9EE4A140193F9100003C7FCF /* README.md */; };
+		9EE4A143193F9417003C7FCF /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE4A142193F9417003C7FCF /* MyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		9EE4A134193F8F44003C7FCF /* todo_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todo_swiftTests.swift; sourceTree = "<group>"; };
 		9EE4A13E193F8F87003C7FCF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9EE4A140193F9100003C7FCF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9EE4A142193F9417003C7FCF /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				9EE4A124193F8F44003C7FCF /* Supporting Files */,
 				9EE4A13E193F8F87003C7FCF /* ViewController.swift */,
 				9EE4A140193F9100003C7FCF /* README.md */,
+				9EE4A142193F9417003C7FCF /* MyTableViewCell.swift */,
 			);
 			path = "todo-swift";
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EE4A141193F9100003C7FCF /* README.md in Sources */,
+				9EE4A143193F9417003C7FCF /* MyTableViewCell.swift in Sources */,
 				9EE4A13F193F8F87003C7FCF /* ViewController.swift in Sources */,
 				9EE4A127193F8F44003C7FCF /* AppDelegate.swift in Sources */,
 			);
@@ -387,6 +391,7 @@
 				9EE4A13A193F8F44003C7FCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9EE4A13B193F8F44003C7FCF /* Build configuration list for PBXNativeTarget "todo-swiftTests" */ = {
 			isa = XCConfigurationList;
@@ -395,6 +400,7 @@
 				9EE4A13D193F8F44003C7FCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
